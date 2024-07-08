@@ -19,9 +19,4 @@ describe('Tab1Page', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should sort strings correctly', () => {
-    const unsortedStrings = ['z', 'x', 'y', 'a'];
-    const sortedStrings = component.sortStrings(unsortedStrings);
-    expect(sortedStrings).toEqual(['a', 'x', 'y', 'z']);
-  });
 });

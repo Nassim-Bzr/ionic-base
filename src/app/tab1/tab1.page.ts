@@ -13,15 +13,18 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   imports: [CommonModule, FormsModule, IonicModule, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
 })
 export class Tab1Page {
-  strings: string[] = [];
+  strings: string[] = ['orange', 'apple', 'banana', 'grape'];
   sortedStrings: string[] = [];
 
-  constructor() {
-    this.strings = ['orange', 'apple', 'banana', 'grape'];
+  constructor() {}
+
+  ngOnInit() {
     this.sortedStrings = this.sortStrings(this.strings);
+    console.log(this.sortedStrings);
   }
 
   sortStrings(strings: string[]): string[] {
-    return strings.sort((a, b) => a.localeCompare(b));
+    return strings.sort((a, b) => b.localeCompare(a));
+    console.log(this.sortedStrings)
   }
 }
